@@ -1,7 +1,12 @@
 package main
 
-import "fmt"
+import(
+  "fmt"
+  "flag"  
+)
 
 func main(){
-	fmt.Println("welcom to you-dl")
+	url := flag.String("url", "", "Youtube Url")
+	flag.Parse()
+	fmt.Printf("User input is: %s \n", *url)
 }
